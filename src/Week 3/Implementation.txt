@@ -1,0 +1,17 @@
+1. Use concurrentHashMap to assure thread safe.
+
+2. recordSongPlays: 
+	Use compute method to update add and update values
+
+3. getPlaysForSong:
+	Use get method to get the value. If the value is null, return -1,
+otherwise just return the value.
+
+3. getTopNSongsPlayed:
+	First, make sure the size of the list you're trying to get is less
+than the number of the songs existing in the Map.
+	Store all the entrySets into an ArrayList
+	Sort the arraylist with a new override Comparator(use negative sign
+to achieve decending order)
+	Based on the number of the top songs we're required to get, add the 
+keys of the first n entries in the Arraylist to a new list. Return it.
